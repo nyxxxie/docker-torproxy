@@ -20,6 +20,7 @@ docker run -d -p 9050:9050 torproxy
 ```
 # curl >= 7.21.7
 curl -x socks5h://localhost:9050 https://3g2upl4pq6kufc4m.onion/
+
 # curl >= 7.18.0
 curl --socks5-hostname localhost:9050 https://3g2upl4pq6kufc4m.onion/
 
