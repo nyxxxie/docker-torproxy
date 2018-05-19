@@ -1,11 +1,13 @@
 # docker-torproxy
-A super lightweight (image size is only ~15MB!) docker container designed to
-be used as a proxy for other applications (irc, http, etc).  I'm currently
-using it to scrape onion sites, and plan to use it with [black widow][1].
+Need a quick tor proxy for IRC, scraping, or some other purpose?  This image
+sets up a fully functional tor proxy in 15mb.  The image itself is extremely
+lightweight and easy to understand; it simply runs tor on alpine linux using
+the torrc config file located in this repo.  Feel free to fork and modify the
+config if you need any of the other features that tor provides.
 
 ## Starting the container
 
-### From dockerhub
+### From Dockerhub
 TODO: set this up
 
 ### From cloned repo
@@ -30,7 +32,7 @@ curl --socks5-hostname localhost:9050 https://3g2upl4pq6kufc4m.onion/
 #       anonymize clearnet lookups.
 ```
 
-### python
+### Python (tested with 3.6)
 ```
 import requests
 
